@@ -47,3 +47,23 @@ var jarJarBinks = {
     attackPower: 25
   };
   
+  function initHero(selectedChar) {
+    character.name = selectedChar.name;
+    character.health = selectedChar.health;
+    character.baseAttack = selectedChar.baseAttack;
+    character.attack = selectedChar.attack;
+  }
+  
+  function initEnemy(enemyPick) {
+    enemy.name = enemyPick.name;
+    enemy.health = enemyPick.health;
+    enemy.baseAttack = enemyPick.baseAttack;
+    enemy.attack = enemyPick.attack;
+  }
+
+  // This function will move the remaining characters to the enemies section
+function moveToEnemies() {
+    $(".open-char").removeClass("open-char").addClass("enemyChar");
+    $("#leftOverEnemies").append($(".enemyChar"));
+  }
+  

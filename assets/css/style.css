@@ -17,8 +17,6 @@ body {
     color:  black;
 }
 
-
-
 .char-img {
 	display: inline-block;
   	height: 145px;
@@ -32,4 +30,55 @@ body {
 .char-img p {
 	text-align: center;
 	margin: 0px 2px 0px 2px;
+}
+
+
+#chosenChar {
+	height: 190px;
+}
+
+#chosenChar h2 {
+	font-size: 30px;
+    color: #485bf0;
+}
+
+.chosenChar {
+	border-color: #dd48f0;
+	background-color: #5bf048;
+}
+
+#leftOverEnemies h2 {
+	font-size: 30px;
+    color: #8948f0;
+}
+
+.enemy-character {
+	border-color: #48f0dd;
+	background-color: #f0485b;
+	margin: 0px 2px 0px 2px;
+}
+
+#fightArea h2 {
+	font-size: 2em;
+    color: #f0485b;
+}
+
+#defender-section {
+	height: 210px;
+}
+
+#defender-section h2 {
+	font-size: 2em;
+    color: #f0485b;
+}
+
+.defender-character {
+	border-color: #485bf0;
+	background-color: #f0dd48;
+}
+
+#game-message {
+	font-size: 1.5em;
+	font-weight: bold;
+    color: 	#f0dd48;
 }
