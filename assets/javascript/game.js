@@ -1,8 +1,8 @@
 //SET VARIABLES
 var charSelected = false;
 var enemySelected = false;
-var character = {};
-var enemy = {};
+var character = [];
+var enemy = [];
 var enemiesDefeated = 0;
 
 gameOver = false;
@@ -10,16 +10,16 @@ gameOver = false;
 
 var jarJarBinks = {
     name: "Jar Jar Binks",
-    health: 120,
-    attack: 8,
-    attackPower: 8
+    health: 420,
+    attack: 1,
+    attackPower: 1
   };
   
   var lukeSkywalker = {
     name: "Luke Skywalker",
     health: 100,
-    attack: 5,
-    attackPower: 5
+    attack: 10,
+    attackPower: 10
 };
   
   var darthVader = {
@@ -64,8 +64,8 @@ var jarJarBinks = {
     charSelected = false;
     enemySelected = false;
     enemiesDefeated = 0;
-    character = {};
-    enemy = {};
+    character = [];
+    enemy = [];
     
     $("#jar-jar-char").children(".health").html(jarJarBinks.health);
     $("#luke-sky-char").children(".health").html(lukeSkywalker.health);
@@ -266,7 +266,7 @@ var jarJarBinks = {
       // User attacks the defender and decreases the defender's health points
       enemy.health = enemy.health - character.attack;
       $(".enemyDefender").children(".health").html(enemy.health);
-      $("#announcement").html("<p>You attacked " + enemy.name + " for " + character.attack + " damage.<p>");
+      $("#announcement").html("<br><p>You attacked " + enemy.name + " for " + character.attack + " damage.<p>");
 
       // User's attack power increases
       character.attack = character.attack + character.attackPower;
@@ -278,11 +278,11 @@ var jarJarBinks = {
 
         // Check if the user survives the attack
         if (character.health > 0) {
-          $("#announcement").append("<p>" + enemy.name + " attacked you back for " + enemy.attackPower + " damage.</p>");
+          $("#announcement").append("<br><p>" + enemy.name + " attacked you back for " + enemy.attackPower + " damage.</p>");
         } else {
           gameOver = true;
           $("#restart").show();
-          $("#announcement").html("<p>Do you even lift? Game over.</p><p>Play again?</p>");
+          $("#announcement").html("<br><p>Do you even lift? Game over.</p><p>Play again?</p>");
           
         }
       } else {
@@ -290,20 +290,20 @@ var jarJarBinks = {
         enemiesDefeated++;
         enemySelected = false;
         $(".enemyDefender").hide();
-        $("#announcement").html("<p>You demolished " + enemy.name + "! Pick another victim.</p>");
+        $("#announcement").html("<br><p>You demolished " + enemy.name + "! Pick another victim.</p>");
         
 
         // Check if the user has won the game
         if (enemiesDefeated === 4) {
           gameOver = true;
-          $("#announcement").html("<p>You win Star Wars!</p><p>Play again?</p>");
+          $("#announcement").html("<br><p>You win Star Wars!</p><p>Play again?</p>");
           $("#restart").show();
         }
       }
     } else if (!charSelected&& !gameOver) {
-      $("#announcement").html("<p>Select your game character!</p>");
+      $("#announcement").html("<br><p>Select your game character!</p>");
     } else if (!enemySelected && !gameOver) {
-      $("#announcement").html("<p>Choose an enemy to fight!</p>");
+      $("#announcement").html("<br><p>Choose an enemy to fight!</p>");
     }
 
 

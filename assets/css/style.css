@@ -13,6 +13,7 @@ body {
 .jumbotron h1 {
 	font-size: 55px;
     color:  black;
+    text-shadow: 1.5px 1px white;
 }
 
 .char-img {
@@ -38,6 +39,7 @@ body {
 #chosenChar h2 {
 	font-size: 30px;
     color: #485bf0;
+    text-shadow: 1.5px 1px white;
 }
 
 .chosenChar {
@@ -48,6 +50,7 @@ body {
 #leftOverEnemies h2 {
 	font-size: 30px;
     color: #6be73a;
+    text-shadow: 1.5px 1px white;
 }
 
 .enemyChar {
@@ -59,6 +62,7 @@ body {
 #fightArea h2 {
 	font-size: 2em;
     color: #e61620;
+    text-shadow: 1.5px 1px white;
 }
 
 #defendArea {
@@ -79,4 +83,5 @@ body {
 	font-size: 1.5em;
 	font-weight: bold;
     color: 	#3235f1;
+    text-shadow: 1.5px 1px white;
 }
