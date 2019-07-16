@@ -43,42 +43,42 @@ body {
 }
 
 .chosenChar {
-	border-color: #dd48f0;
-	background-color: #5bf048;
+	border-color: #8aa3c4;
+	background-color: #e0c83b;
 }
 
 #leftOverEnemies h2 {
 	font-size: 30px;
-    color: #8948f0;
+    color: #6be73a;
 }
 
-.enemy-character {
-	border-color: #48f0dd;
-	background-color: #f0485b;
+.enemyChar {
+	border-color: #291269;
+	background-color: #ee8b39;
 	margin: 0px 2px 0px 2px;
 }
 
 #fightArea h2 {
 	font-size: 2em;
-    color: #f0485b;
+    color: #f048cc;
 }
 
-#defender-section {
+#defendArea {
 	height: 210px;
 }
 
-#defender-section h2 {
+#defendArea h2 {
 	font-size: 2em;
-    color: #f0485b;
+    color: #e2d8d7;
 }
 
-.defender-character {
-	border-color: #485bf0;
-	background-color: #f0dd48;
+.enemyDefender {
+	border-color: #4e78b6;
+	background-color: #c98319;
 }
 
-#game-message {
+#announcement {
 	font-size: 1.5em;
 	font-weight: bold;
-    color: 	#f0dd48;
+    color: 	#3235f1;
 }
