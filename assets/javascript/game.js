@@ -124,13 +124,146 @@ var jarJarBinks = {
           $("#defendArea").append(this);
         }
       }
+    });
 
+      $("#luke-sky-char").on("click", function () {
+        console.log("Luke Skywalker is selected");
+    
+        // User is choosing the character
+        if(charSelected== false) {
+          $("#announcement").empty();
+    
+          // Set the user's character
+          initHero(lukeSkywalker);
+          charSelected= true;
+    
+          // Display the chosen character
+          $("#luke-sky-char").removeClass("open-char").addClass("chosenChar");
+          $("#chosenChar").append(this);
+    
+          // Move the remaining characters to the enemies section
+          moveToEnemies();
+        } else if ((charSelected== true) && (enemySelected == false)) {
+          // User is choosing the defender
+          if($("#luke-sky-char").hasClass("enemyChar")) {
+            $("#announcement").empty();
+    
+            // Set the user's enemy
+            initEnemy(lukeSkywalker);
+            enemySelected = true;
+    
+            // Add the character to the defender section 
+            $("#luke-sky-char").removeClass("enemyChar").addClass("enemyDefender");
+            $("#defendArea").append(this);
+          }
+        }
+      });
+    
+      $("#darth-vader-char").on("click", function () {
+        console.log("Darth Vader is selected");
+    
+        // User is choosing the character
+        if(charSelected== false) {
+          $("#announcement").empty();
+    
+          // Set the user's character
+          initHero(darthVader);
+          charSelected= true;
+    
+          // Display the chosen character
+          $("#darth-vader-char").removeClass("open-char").addClass("chosenChar");
+          $("#chosenChar").append(this);
+    
+          // Move the remaining characters to the enemies section
+          moveToEnemies();
+        } else if ((charSelected== true) && (enemySelected == false)) {
+          // User is choosing the defender
+          if($("#darth-vader-char").hasClass("enemyChar")) {
+            $("#announcement").empty();
+    
+            // Set the user's enemy
+            initEnemy(darthVader);
+            enemySelected = true;
+    
+            // Add the character to the defender section 
+            $("#darth-vader-char").removeClass("enemyChar").addClass("enemyDefender");
+            $("#defendArea").append(this);
+          }
+        }
+      });
+    
+      $("#r2d2-char").on("click", function () {
+        console.log("Artoo Detoo chosen");
+    
+        // User is choosing the character
+        if(charSelected== false) {
+          $("#announcement").empty();
+    
+          // Set the user's character
+          initHero(R2D2);
+          charSelected= true;
+    
+          // Display the chosen character
+          $("#r2d2-char").removeClass("open-char").addClass("chosenChar");
+          $("#chosenChar").append(this);
+    
+          // Move the remaining characters to the enemies section
+          moveToEnemies();
+        } else if ((charSelected== true) && (enemySelected == false)) {
+          // User is choosing the defender
+          if($("#r2d2-char").hasClass("enemyChar")) {
+            $("#announcement").empty();
+    
+            // Set the user's enemy
+            initEnemy(R2D2);
+            enemySelected = true;
+    
+            // Add the character to the defender section 
+            $("#r2d2-char").removeClass("enemyChar").addClass("enemyDefender");
+            $("#defendArea").append(this);
+          }
+        }
+      });
+    
+      $("#boba-char").on("click", function () {
+        console.log("Boba Fett chosen");
+    
+        // User is choosing the character
+        if(charSelected== false) {
+          $("#announcement").empty();
+    
+          // Set the user's character
+          initHero(R2D2);
+          charSelected= true;
+    
+          // Display the chosen character
+          $("#boba-char").removeClass("open-char").addClass("chosenChar");
+          $("#chosenChar").append(this);
+    
+          // Move the remaining characters to the enemies section
+          moveToEnemies();
+        } else if ((charSelected== true) && (enemySelected == false)) {
+          // User is choosing the defender
+          if($("#boba-char").hasClass("enemyChar")) {
+            $("#announcement").empty();
+    
+            // Set the user's enemy
+            initEnemy(R2D2);
+            enemySelected = true;
+    
+            // Add the character to the defender section 
+            $("#boba-char").removeClass("enemyChar").addClass("enemyDefender");
+            $("#defendArea").append(this);
+          }
+        }
     });
      
-  $("#restart").on("click", function() {
-    console.log("Restart selected");
+    
+  
+    $("#restart").on("click", function() {
+        console.log("Restart selected");
 
-    resetGame();
-  });
- 
+        resetGame();
     });
+ 
+});
