@@ -1,9 +1,7 @@
-#imgs{
-width: 150px;
-height: 150px;
-float:left;
-}
-
 body {
-    background-image: image("../images/background.jpg")
+	background: url('../images/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;	
 }
