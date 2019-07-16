@@ -1,0 +1,9 @@
+#imgs{
+width: 150px;
+height: 150px;
+float:left;
+}
+
+body {
+    background-image: image("../images/background.jpg")
+}
