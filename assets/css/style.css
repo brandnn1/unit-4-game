@@ -5,3 +5,28 @@ body {
     background-size: cover;
     -o-background-size: cover;	
 }
+
+.jumbotron {
+
+    margin: 30px 0px 30px 0px;
+    opacity: 0.7;
+}
+
+.jumbotron h1 {
+	font-size: 60px;
+    color:  black;
+}
+.char-img {
+	display: inline-block;
+  	height: 145px;
+	padding: 0px 20px 0px 20px;
+	margin: 0px 2px 0px 2px;
+	background-color: white;
+	border: solid;
+	border-color: blue;
+}
+
+.char-img p {
+	text-align: center;
+	margin: 0px 2px 0px 2px;
+}
