@@ -1,9 +1,7 @@
 body {
 	background: url('../images/background.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;	
+
 }
 
 .jumbotron {
@@ -13,13 +11,13 @@ body {
 }
 
 .jumbotron h1 {
-	font-size: 60px;
+	font-size: 55px;
     color:  black;
 }
 
 .char-img {
 	display: inline-block;
-  	height: 145px;
+  	height: 180px;
 	padding: 0px 20px 0px 20px;
 	margin: 0px 2px 0px 2px;
 	background-color: white;
@@ -60,7 +58,7 @@ body {
 
 #fightArea h2 {
 	font-size: 2em;
-    color: #f048cc;
+    color: #e61620;
 }
 
 #defendArea {

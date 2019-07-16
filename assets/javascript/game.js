@@ -259,6 +259,55 @@ var jarJarBinks = {
     });
      
     
+  $("#attack").on("click", function() {
+
+    // User is ready to attack the defender
+    if (charSelected&& enemySelected && !gameOver) {
+      // User attacks the defender and decreases the defender's health points
+      enemy.health = enemy.health - character.attack;
+      $(".enemyDefender").children(".health").html(enemy.health);
+      $("#announcement").html("<p>You attacked " + enemy.name + " for " + character.attack + " damage.<p>");
+
+      // User's attack power increases
+      character.attack = character.attack + character.attackPower;
+
+      // If defender is still alive, they counter attack the user
+      if (enemy.health > 0) {
+        character.health = character.health - enemy.attackPower;
+        $(".chosenChar").children(".health").html(character.health);
+
+        // Check if the user survives the attack
+        if (character.health > 0) {
+          $("#announcement").append("<p>" + enemy.name + " attacked you back for " + enemy.attackPower + " damage.</p>");
+        } else {
+          gameOver = true;
+          $("#restart").show();
+          $("#announcement").html("<p>Do you even lift? Game over.</p><p>Play again?</p>");
+          
+        }
+      } else {
+        // Defender is defeated
+        enemiesDefeated++;
+        enemySelected = false;
+        $(".enemyDefender").hide();
+        $("#announcement").html("<p>You demolished " + enemy.name + "! Pick another victim.</p>");
+        
+
+        // Check if the user has won the game
+        if (enemiesDefeated === 4) {
+          gameOver = true;
+          $("#announcement").html("<p>You win Star Wars!</p><p>Play again?</p>");
+          $("#restart").show();
+        }
+      }
+    } else if (!charSelected&& !gameOver) {
+      $("#announcement").html("<p>Select your game character!</p>");
+    } else if (!enemySelected && !gameOver) {
+      $("#announcement").html("<p>Choose an enemy to fight!</p>");
+    }
+
+
+  });
   
     $("#restart").on("click", function() {
         console.log("Restart selected");
